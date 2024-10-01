@@ -37,7 +37,7 @@
        ports:
          - "5444:5432"
        volumes:
-         - pgdata_wisher2:/var/lib/postgresql/data
+         - postgres_data_volume:/var/lib/postgresql/data
        networks:
          - laravel_network
 
@@ -53,4 +53,4 @@
        driver: bridge
 
    volumes:
-     pgdata_wisher2:
+     postgres_data_volume:
