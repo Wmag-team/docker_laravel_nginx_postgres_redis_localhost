@@ -5,6 +5,7 @@
        restart: always
        volumes:
          - ../laravel:/var/www/html
+         - ../laravel_snippets/presset:/var/snippets
          - ../supervisor/:/etc/supervisor/custom.d/
        working_dir: /var/www/html
        networks:
