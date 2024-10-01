@@ -3,6 +3,8 @@
 Just follow this instruction and have a fun with developing software :)
 After this installation on any server you will have complete working last version of laravel with Jobs queue on Redis, controlled by Horizon - it will give unlimited options to produce any Queue with any confiuration! Good luck!
 
+You also can USE AUTO_INSTALL.md file to INSTALL all with preset .env & compose.json files
+
 ### Installation with explanations:
 
 1. Download this git repository to your PC by command:
@@ -40,44 +42,6 @@ sudo chmod -R ugo+rw storage
 
 ```
 
-
-
-----------------------
-
-### Installation commands only:
-
-```
-git clone git@github.com:Wmag-team/docker_laravel_nginx_postgres_redis_localhost.git .
-cd docker && docker-compose up -d --build && cd ..
-docker exec -it laravel_app bash
-composer create-project --prefer-dist laravel/laravel .
-exit
-```
-
-... some manual work here with files: composer.json & .env ...
-
-```
-docker exec -it laravel_app bash
-composer u
-chmod -R 777 storage bootstrap/cache
-php artisan migrate
-php artisan optimize:clear
-php artisan route:cache
-php artisan route:clear
-php artisan event:cache
-php artisan event:clear
-php artisan config:cache
-php artisan config:clear
-php artisan view:cache
-php artisan view:clear
-touch storage/logs/laravel.log
-touch storage/logs/error.log
-touch storage/logs/debug.log
-sudo chmod -R 775 storage
-sudo chmod -R ugo+rw storage
-
-
-```
 
 ### Why do you need it ?
 
